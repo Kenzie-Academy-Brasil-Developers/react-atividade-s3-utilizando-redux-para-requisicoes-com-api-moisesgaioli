@@ -4,14 +4,14 @@ import addDigimonsThunk from "../../store/modules/digimons/thunk";
 
 const Search = () => {
 
-  const [input, setInput] = useState("");
+  const [digimonName, setDigimonName] = useState("");
   const [error, setError] = useState(false);
 
   const dispatch = useDispatch()
 
   const handleSearch = () => {
-    dispatch(addDigimonsThunk(input, setError))
-    setInput("")
+    dispatch(addDigimonsThunk(digimonName, setError))
+    setDigimonName("")
   }
 
   return (
@@ -19,11 +19,11 @@ const Search = () => {
       <h2>Procure pelo seu Digimon!</h2>
       <div>
         <input
-          value={input}
-          onChange={(event) => setInput(event.target.value)}
-          placeholder="Procure seu Digimon"
-        ></input>
-        <button onClick={handleSearch}>Pesquisar</button>
+          value={digimonName}
+          onChange={(e) => setDigimonName(e.target.value)}
+          placeholder="Procure seu Digimon">
+          </input>
+        <button  onClick={handleSearch}>Pesquisar</button>
       </div>
     </div>
   );
