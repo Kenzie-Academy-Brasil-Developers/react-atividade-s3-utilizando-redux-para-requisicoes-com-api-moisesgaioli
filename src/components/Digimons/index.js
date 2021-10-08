@@ -10,10 +10,12 @@ const Digimons = () => {
             {
                 digimons.map((item, index) => {
                     return <div key={index}>
-                        <h3> {item.name} </h3>
-                        <img src={item.img} alt={item.name} />
-                        <p> {item.level} </p>
-                    </div>
+                            <h3> {item[0].name} </h3>
+                            <img src={item[0].img} alt={item[0].name} />
+                            <p> Level: {item[0].level} </p>
+                            <hr />
+                        </div>
+
                 })
             }
         </>

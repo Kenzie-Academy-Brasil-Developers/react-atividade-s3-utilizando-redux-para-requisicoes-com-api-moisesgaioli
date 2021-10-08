@@ -5,12 +5,11 @@ import addDigimonsThunk from "../../store/modules/digimons/thunk";
 const Search = () => {
 
   const [digimonName, setDigimonName] = useState("");
-  const [error, setError] = useState(false);
 
   const dispatch = useDispatch()
 
   const handleSearch = () => {
-    dispatch(addDigimonsThunk(digimonName, setError))
+    dispatch(addDigimonsThunk(digimonName))
     setDigimonName("")
   }
 
